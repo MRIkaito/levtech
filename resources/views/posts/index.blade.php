@@ -13,7 +13,6 @@
             <div class='post'>
                 <h2 class='title'>{{$post->title}}</h2>
                 <p class='body'>{{$post->body}}</p>
-                <!--<p>{{$post}}</p>-->
             </div>
         @endforeach
         </div>

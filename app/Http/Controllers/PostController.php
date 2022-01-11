@@ -7,11 +7,11 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    public function index(Post $post)
+    public function index(Post $post) //「PostモデルにあるPostインスタンスの性質を持つ」変数$postという意味
     {
-    return view('posts/index') -> with(['posts' => $post->get()]);
+    return view('posts/index') -> with(['posts' => $post->getByLimit()]);
     }
-    // Post.phpにある$postがget()メソッドによって得た返り値を，
+    // Post.phpにある$postがgetByLimit()関数によって得た返り値を，
     // $postsという変数名で格納して，posts/indexに表示した．
 }
 ?>
