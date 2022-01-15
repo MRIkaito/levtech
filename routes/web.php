@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Routes;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,5 +12,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+// Route::get('/',function(){
+//   return view('welcome'); 
+// });
 
-Route::get('/', 'PostController@index');
+Route::get('/','PostController@index');
+Route::get('/posts/{post}', 'PostController@show');
+
+// {}で囲んだ部分が動的に変更される部分．
+// Laravelの機能diを利用するため，idではなく，postと記載している．
