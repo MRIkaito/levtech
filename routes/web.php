@@ -17,7 +17,6 @@ use Illuminate\Support\Facades\Routes;
 // });
 
 Route::get('/','PostController@index');
+Route::get('/posts/create', 'PostController@create');
 Route::get('/posts/{post}', 'PostController@show');
-
-// {}で囲んだ部分が動的に変更される部分．
-// Laravelの機能diを利用するため，idではなく，postと記載している．
+Route::post('/posts','PostController@store');
